@@ -108,8 +108,8 @@ $APPLICATION->SetTitle('Главная');
 </section>
 <!-- блок с продукцией -->
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"product",
+	"bitrix:news.list", 
+	"product", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -131,7 +131,10 @@ $APPLICATION->SetTitle('Главная');
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0 => "", 1 => "",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "1",
@@ -150,7 +153,26 @@ $APPLICATION->SetTitle('Главная');
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0 => "MODALID", 1 => "VITA", 2 => "VATAAMOUNT", 3 => "MACROAMOUNT", 4 => "MICROAMOUNT", 5 => "AMOUNT", 6 => "MACRO", 7 => "MICRO", 8 => "SUBTITLE", 9 => "COMPOSITION", 10 => "COLOR", 11 => "KJ", 12 => "KKAL", 13 => "",),
+		"PROPERTY_CODE" => array(
+			0 => "SUBTITLE",
+			1 => "POSITION",
+			2 => "COLOR",
+			3 => "MODALID",
+			4 => "VITA",
+			5 => "VATAAMOUNT",
+			6 => "MACROAMOUNT",
+			7 => "MICROAMOUNT",
+			8 => "AMOUNT",
+			9 => "MACRO",
+			10 => "MICRO",
+			11 => "COMPOSITION",
+			12 => "KJ",
+			13 => "KKAL",
+			14 => "ADD",
+			15 => "NUTRITION",
+			16 => "COLOR",
+			17 => 'MODALS',
+		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -163,7 +185,8 @@ $APPLICATION->SetTitle('Главная');
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	)
+	),
+	false
 ); ?>
 
 <!-- секция ответы на вопросы -->
