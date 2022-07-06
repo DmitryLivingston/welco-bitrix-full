@@ -230,13 +230,14 @@ $ar_res = [];
 
 while ($obRes = $resElement->GetNextElement())
 {
-	$ar_res[] = $obRes->GetFields();
+	$fields = $obRes->GetFields();
+	$ar_res[$fields['ID']] = $fields;
 }
 
 $arResult["MODALS"] = $ar_res;
-
+// echo '<pre>';
 // var_dump($ar_res);
-
+// echo '</pre>';
 // if (!($element = $resElement->getNext())) {
 // 	echo "Элемент не найден";
 // 	return;

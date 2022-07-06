@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 
 			<!-- вычисление id модалок -->
 
-			<!-- <div class="d-none samson" data-modal-id="<?=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>"></div>
+			<!-- <div class="d-none samson" data-modal-id="<?//=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>"></div>
 			<script>
 				$(document).ready(function() {
 					let modalsIds = [];
@@ -60,8 +60,8 @@ $this->setFrameMode(true);
 										</p>
 										<!-- кнопки -->
 										<div class="round_links d-flex justify-content-between">
-											<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
-											<a href="" data-bs-toggle="modal" data-bs-target="#openModal-<?= $arItem["ID"] ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
+											<a href="#where_bay" class="round_button" >где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
+											<a href="" data-modal-id="<?=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
 										</div>
 									</div>
 								</div>
@@ -75,7 +75,7 @@ $this->setFrameMode(true);
 									</p>
 									<!-- кнопки -->
 									<div class="round_links justify-content-between d-none d-md-flex">
-										<a href="" data-bs-toggle="modal" data-modal-id="<?=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>" data-bs-target="#openModal-<?= $arItem["ID"] ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i></a>
+										<a href="" data-modal-id="<?=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i></a>
 										<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
 									</div>
 								</div>
@@ -104,7 +104,7 @@ $this->setFrameMode(true);
 										<?= $arItem["PREVIEW_TEXT"] ?>
 									</p>
 									<div class="round_links d-flex justify-content-between">
-										<a href="" data-bs-toggle="modal" data-bs-target="#openModal-<?= $arItem["ID"] ?>" class="round_button pt-2">состав <br><i class="fa-solid fa-plus"></i> </a>
+										<a href="" data-modal-id="<?=implode(',',$arItem["PROPERTIES"]["MODAL"]["VALUE"])?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
 										<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
 									</div>
 								</div>
@@ -237,9 +237,60 @@ $this->setFrameMode(true);
 	foreach ($arResult["ITEMS"] as $arItem)
 	{
 		?>
-			<div class="modals-block" data-ids="<?=implode(',',$arItem['PROPERTIES']['MODAL']['VALUE'])?>">
-				
+			<div class="modals-block hidden" data-ids="<?=implode(',',$arItem['PROPERTIES']['MODAL']['VALUE'])?>">
+				<div class="modals-block-inner">
+					<div class="modals-block-list">
+					<? foreach ($arItem['PROPERTIES']['MODAL']['VALUE'] as $modalId): ?>
+							<? $item = $arResult['MODALS'][$modalId]; ?>
+							<div class="modal-body">
+								<div class="modal-close"></div>
+								<div class="modal-body-inner modalProduct">
+									<div class="row m-0">
+										<div class="col-5">
+											<p class="modal-subtitle" id="openModalLabel"><?= $item["PROPERTY_SUBTITLE_VALUE"] ?></p>
+											<p class="modalAmount"><?= $item["PROPERTY_AMOUNT_VALUE"] ?></p>
+											<div class="modalAntistressImgWrap"><img src="<?= CFile::GetPath($item["PREVIEW_PICTURE"]); ?>" alt="изображение упаковки товара велеопэт" class="modal_antistress_img"></div>
+											<div class="col-7"></div>
+										</div>
+										<div class="col-7">
+											<div class="modalAntistress_content">
+												<div class="modalAntistress_content_composition">
+													<div class="modalAntistress_title">
+														<h6>Состав</h6>
+													</div>
+													<div class="modalAntistress_text">
+														<p><?= $item["PROPERTY_COMPOSITION_VALUE"]["TEXT"] ?></p>
+													</div>
+												</div>
+											</div>
+											<div class="modalAntistress_content_table">
+												<div class="row">
+													<div class="col modalAntistress_left">
+														<div class="modalAntistress_title">
+															<h6>Добавки</h6>
+														</div>
+														<div><?= $item["PROPERTY_ADD_VALUE"]["TEXT"] ?></div>
+													</div>
+													<div class="col-7 modalAntistress_right">
+														<div class="modalAntistress_title">
+															<h6>Питательная ценность</h6>
+														</div>
+														<div><?= $item["PROPERTY_NUTRITION_VALUE"]["TEXT"] ?></div>
+													</div>
+													<p class="modalAntistress_bottom_text">
+														Неполнорационный корм (лакомство-пребиотик). Не является лекарственным средством.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					<? endforeach; unset($modalId); ?>
+						</div>
+				</div>
 			</div>
 		<?
 	}
+	unset ($arItem);
 ?>
