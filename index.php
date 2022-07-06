@@ -94,7 +94,7 @@ $APPLICATION->SetTitle('Главная');
 						<div class="about_img_wrap">
 
 							<picture>
-								<source srcset="img/planshet-dog.png" media="(max-width: 768px)">
+								<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/planshet-dog.png" media="(max-width: 768px)">
 								<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/why-need-dog.png">
 								<img src="<?= SITE_TEMPLATE_PATH; ?>/img/why-need-dog.png" alt="фотография корги">
 							</picture>
@@ -108,8 +108,8 @@ $APPLICATION->SetTitle('Главная');
 </section>
 <!-- блок с продукцией -->
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"product", 
+	"bitrix:news.list",
+	"product",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -190,33 +190,6 @@ $APPLICATION->SetTitle('Главная');
 ); ?>
 
 <!-- секция ответы на вопросы -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="<?= SITE_TEMPLATE_PATH; ?>/img/prime-planshet.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="<?= SITE_TEMPLATE_PATH; ?>/img/prime-planshet.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="<?= SITE_TEMPLATE_PATH; ?>/img/prime-planshet.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
 <section class="answers" id="answers">
 	<div class="row m-0">
 		<div class="col-12 col-lg-6 px-0">
@@ -225,80 +198,71 @@ $APPLICATION->SetTitle('Главная');
 			</div>
 		</div>
 		<div class="col-12 col-lg-6 px-0">
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Почему пищеварение питомца так важно?</h4>
-								<p>Потому что нормальная работа желудочно-кишечного тракта – это залог всего здоровья организма. Кошки и собаки совсем как люди – страдают от нарушений пищеварения из-за стресса, неполноценного питания или приема антибиотиков. И для скорейшего возврата к нормальной жизни любимца следует позаботиться о быстром восстановлении естественной функциональной микрофлоры кишечника.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Причем тут вообще иммунитет?</h4>
-								<p>А вот причем: более 70% иммунитета обеспечивает здоровый кишечник. Если он работает плохо – еда не усваивается. Недостаток витаминов и минералов, белков и жиров делает животных беззащитными перед инфекциями. Чтобы восстановить иммунную систему, следует помочь организму усваивать все полезные нутриенты из пищи.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Как именно работает Welco?</h4>
-								<p>Лакомство Welco содержит натуральный инновационный пребиотический комплекс FOS+MOS PREBIOTIC FORMULA, который помогает хорошо жить полезным бактериям в кишечнике. Фруктоолигосахариды (FOS)+ маннаолигосахариды (MOS) улучшают пищеварение и адаптивность животных, выводят токсины, а также защищают организм от проникновения патогенных вирусов и микроорганизмов, помогая естественному иммунитету кошек и собак.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Поможет ли Welco, если у моего домашнего животного чувствительное пищеварение?</h4>
-								<p>Да, точно поможет. Ведь в составе лакомства натуральные компоненты, специально подобранные ветеринарными специалистами для бережной заботы о пищеварении таких питомцев и минимизации негативных проявлений работы их особенной пищеварительной системы.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Как понять, что у моего питомца кожа и шерсть, требующие особого внимания?</h4>
-								<p>На самом деле довольно просто: если кожа питомца шелушится, потеряла упругость, а шерсть тусклая и ломкая – вы получили сигнал о помощи. Ведь внешность – это важно, и для животных особенно: это показатель их здоровья.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Почему пищеварение питомца так важно?</h4>
-								<p>Потому что нормальная работа желудочно-кишечного тракта – это залог всего здоровья организма. Кошки и собаки совсем как люди – страдают от нарушений пищеварения из-за стресса, неполноценного питания или приема антибиотиков. И для скорейшего возврата к нормальной жизни любимца следует позаботиться о быстром восстановлении естественной функциональной микрофлоры кишечника.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="answers_container">
-							<div class="answers_item">
-								<h4>Не хочу усложнять жизнь себе и питомцу, насколько комфортно мне будет применять такой продукт?</h4>
-								<p>Будет просто и удобно, ведь давать вкусное лакомство кошке или собаке Вам будет только в удовольствие. Которое, тем не менее, поможет четвероногому члену семьи быстро стать здоровым изнутри и красивым снаружи.</p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
+			<? $APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"answers",
+				array(
+					"COMPONENT_TEMPLATE" => ".default",
+					"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+					"IBLOCK_ID" => "4",	// Код информационного блока
+					"NEWS_COUNT" => "20",	// Количество новостей на странице
+					"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+					"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+					"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+					"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+					"FILTER_NAME" => "",	// Фильтр
+					"FIELD_CODE" => array(	// Поля
+						0 => "",
+						1 => "",
+					),
+					"PROPERTY_CODE" => array(	// Свойства
+						0 => "",
+						1 => "",
+					),
+					"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+					"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+					"AJAX_MODE" => "N",	// Включить режим AJAX
+					"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+					"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+					"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+					"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+					"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+					"SET_TITLE" => "Y",	// Устанавливать заголовок страницы
+					"SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
+					"SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
+					"SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
+					"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+					"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+					"PARENT_SECTION" => "",	// ID раздела
+					"PARENT_SECTION_CODE" => "",	// Код раздела
+					"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
+					"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+					"DISPLAY_DATE" => "Y",	// Выводить дату элемента
+					"DISPLAY_NAME" => "Y",	// Выводить название элемента
+					"DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+					"DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
+					"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+					"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+					"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
+					"PAGER_TITLE" => "Новости",	// Название категорий
+					"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+					"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+					"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+					"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+					"SET_STATUS_404" => "N",	// Устанавливать статус 404
+					"SHOW_404" => "N",	// Показ специальной страницы
+					"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+				),
+				false
+			); ?>
 		</div>
 	</div>
 
@@ -333,51 +297,73 @@ $APPLICATION->SetTitle('Главная');
 	</div>
 </section>
 <!-- секция где купить -->
-<section class="where_bay position-relative" id="where_bay">
-	<div class="row m-0">
-		<div class="col-10 offset-1 px-0">
-			<div class="row m-0">
-				<div class="col">
-					<div class="where_bay_title">
-						<h2>где купить welco?</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row m-0">
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item">
-						4 лапы
-					</h4>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item">
-						Бетховен
-					</h4>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item">
-						КЗВС
-					</h4>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item">
-						магизоо
-					</h4>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item">
-						petshop
-					</h4>
-				</div>
-				<div class="col-12 col-md-6 col-lg-4">
-					<h4 class="where_bay_item where_bay_item_special">
-						мокрый нос
-					</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"wherebay",
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+		"IBLOCK_ID" => "3",	// Код информационного блока
+		"NEWS_COUNT" => "20",	// Количество новостей на странице
+		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+		"FILTER_NAME" => "",	// Фильтр
+		"FIELD_CODE" => array(	// Поля
+			0 => "",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(	// Свойства
+			0 => "",
+			1 => "",
+		),
+		"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+		"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+		"AJAX_MODE" => "N",	// Включить режим AJAX
+		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+		"SET_TITLE" => "Y",	// Устанавливать заголовок страницы
+		"SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
+		"SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
+		"SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
+		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+		"PARENT_SECTION" => "",	// ID раздела
+		"PARENT_SECTION_CODE" => "",	// Код раздела
+		"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
+		"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+		"DISPLAY_DATE" => "Y",	// Выводить дату элемента
+		"DISPLAY_NAME" => "Y",	// Выводить название элемента
+		"DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+		"DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
+		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+		"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
+		"PAGER_TITLE" => "Новости",	// Название категорий
+		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+		"SET_STATUS_404" => "N",	// Устанавливать статус 404
+		"SHOW_404" => "N",	// Показ специальной страницы
+		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+	),
+	false
+); ?>
+
 <!-- секция с формой и соцсетями -->
 <section class="feedback" id="feedback">
 	<div class="row m-0">
@@ -396,8 +382,7 @@ $APPLICATION->SetTitle('Главная');
 						<input class="text-field__input d-block" type="tel" name="userphone" id="userphone" placeholder="+7 928 978 59 87">
 					</div>
 					<div class="text-field">
-						<label class="text-field__label" for="usermail">Ваша электронная
-							почта</label>
+						<label class="text-field__label" for="usermail">Ваша электронная почта</label>
 						<input class="text-field__input d-block" type="email" name="usermail" id="usermail" placeholder="agitagrand@gmail.com">
 					</div>
 

@@ -554,7 +554,7 @@
     margin-top: 169px;
     margin-bottom: 94px;
   }
-  .where_bay_title h2 {
+  .where_bay_title span {
     font-family: "Proxima Nova", sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -810,11 +810,19 @@
   .modal_menu_text {
     /* padding-top: 210px; */
     max-width: 621px;
+    max-height: 514px;
+    height: 100%;
   }
   .modal_menu_text h3 {
     padding-bottom: 15px;
   }
-  .modal_menu_text h3 a {
+  .modal_menu_text ul {
+    height: 100%;
+  }
+  .modal_menu_text li{
+    list-style-type: none
+  }
+  .modal_menu_text li a {
     font-family: "Proxima Nova";
     font-style: normal;
     font-weight: 700;
@@ -823,9 +831,9 @@
     color: #000000;
     text-decoration: none;
   }
-  .modal_menu_text h3 a:hover {
+  .modal_menu_text li a:hover {
     text-decoration: underline;
-    color: #0067DF;
+    color: #4347FF;
   }
   
   .answers_img {
