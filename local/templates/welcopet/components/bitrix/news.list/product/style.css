@@ -35,6 +35,9 @@ div.news-list img.preview_picture
 	background-color: #fff;
 	padding: 20px;
 	box-sizing: border-box;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+	height: 900px;
+	/* height: 100%; */
 }
 
 .modals-block-inner
@@ -93,7 +96,7 @@ div.news-list img.preview_picture
 {
 	width: 30px;
 	height: 30px;
-	content: '×';
+	content: 'x';
 	display: flex;
 	justify-content: center;
 	align-items: center;

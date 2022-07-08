@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Зачем нужны пребиотики?", 
-		"#feedback", 
+		"#about", 
 		Array(), 
 		Array(), 
 		"" 

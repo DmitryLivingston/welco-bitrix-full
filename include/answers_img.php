@@ -1,0 +1,1 @@
+<img src="<?= SITE_TEMPLATE_PATH; ?>/img/no.png" alt="заглушка отсутствующего изображения" class="answers_img">

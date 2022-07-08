@@ -1,0 +1,1 @@
+<img class="prime_logo-img mobile_logo" src="<?= SITE_TEMPLATE_PATH; ?>/img/welco_logo 1.png" alt="логотип компании вэлкопэт">

@@ -24,25 +24,25 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 		<?= bitrix_sessid_post() ?>
 		<div class="input-group phone_group justify-content-between mb-3">
 
-			<div class="mf-email">
+			<!-- <div class="mf-email w-100"> -->
 				
 				<div class="text-field">
 					<label class="text-field__label" for="usermail">Ваша электронная почта</label>
 					<input class="text-field__input d-block" type="email" name="user_email" value="<?= $arResult["AUTHOR_EMAIL"] ?>" id="usermail" placeholder="test@gmail.com">
 				</div>
-			</div>
+			<!-- </div> -->
 
 
-			<div class="mf-phone">
+			<!-- <div class="mf-phone w-100"> -->
 				
 				<div class="text-field">
 					<label class="text-field__label" for="userphone">Ваш телефон</label>
 					<input class="text-field__input d-block" type="tel" name="user_phone" value="<?= $arResult["user_phone"] ?>" id="userphone">
 				</div>
-			</div>
+			<!-- </div> -->
 
 		</div>
-		<div class="mf-message">
+		<!-- <div class="mf-message w-100"> -->
 			
 			<div class="input-group feedback_text_area_group">
 				<div class="text-field w-100">
@@ -50,7 +50,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 					<textarea class="text-field__textarea d-block" name="MESSAGE" id="usertext" placeholder="Задайте свой вопрос"><?= $arResult["MESSAGE"] ?></textarea>
 				</div>
 			</div>
-		</div>
+		<!-- </div> -->
 
 		<div class="feedback_dropdown_wrap">
 			<div class="row m-0">

@@ -895,7 +895,7 @@
     line-height: 100%;
     text-transform: uppercase;
   }
-  .modalProduct .modal-subtitle {
+  .modalProduct .modal-subtitle, .modalProduct .modal-title {
     padding-left: 62px;
   }
   .modalProduct .modal-subtitle, .modalProduct h6 {
@@ -928,9 +928,9 @@
   .modalProduct .btn-close {
     align-self: self-start;
   }
-  .modalProduct .modalAntistressImgWrap {
+  /* .modalProduct .modalAntistressImgWrap {
     padding-left: 35px;
-  }
+  } */
   .modalProduct table th {
     padding-bottom: 12px;
   }

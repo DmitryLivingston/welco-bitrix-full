@@ -1,0 +1,1 @@
+<img src="<?= SITE_TEMPLATE_PATH; ?>/img/how-use-instruction.png" alt="инструкция по использованию корма велкопэт">

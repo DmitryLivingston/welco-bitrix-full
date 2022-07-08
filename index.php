@@ -8,40 +8,119 @@ $APPLICATION->SetTitle('Главная');
 		<div class="col-12 col-xl-5 offset-xl-1 px-3 order-2 order-md-1">
 			<div class="prime_left_side">
 				<div class="prime_logo d-none d-md-block">
-					<img class="prime_logo-img" src="<?= SITE_TEMPLATE_PATH; ?>/img/welco_logo 1.png" alt="логотип компании вэлкопэт">
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/logo.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 				</div>
 				<div class="prime_title">
-					<h1>Натуральный <span class="orange">пребиотик в виде лакомства</span> для
-						вашего питомца</h1>
+					<h1>
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/primetitle.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
+					</h1>
 				</div>
-				<div class="prime_text"><span>Пребиотик Welco улучшает работу желудочно-кишечного
-						тракта
-						и способствуют усилению естественной защиты организма животных от
-						инфекций</span>
+				<div class="prime_text"><span>
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/primesubtitle.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
+					</span>
 				</div>
 				<div class="prime_button_block d-flex align-items-center justify-content-between">
 					<div class="prime_button">
 						<a href="#where_bay" class="btn prime_btn_violet">
-							Купить Welco
+							<? $APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								".default",
+								array(
+									"COMPONENT_TEMPLATE" => ".default",
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => "/include/prime_button.php",
+									"EDIT_TEMPLATE" => ""
+								),
+								false
+							); ?>
 						</a>
 					</div>
-					<img src="<?= SITE_TEMPLATE_PATH; ?>/img/packs.png" alt="три пауча вэлкопэт" class="pb-3">
+					<div class="pb-3">
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/prime_little_img.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-12 col-xl-6 px-0 order-1 order-md-2">
 			<div class="prime_right_side h-100">
 				<div class="prime_img h-100 w-100">
-					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/prime-planshet.png" media="(max-width: 768px)">
-						<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/prime-mobile" media="(max-width: 360px)">
-						<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/Prime.png">
-						<img src="<?= SITE_TEMPLATE_PATH; ?>/img/Prime.png" alt="изображение двух пачек товара велкопэт для кошек и собак на оранжевом фоне" class="prime_bg_img">
-					</picture>
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/prime_big_img.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 					<div class="prime_logo d-block d-md-none position-absolute">
-						<img class="prime_logo-img mobile_logo" src="<?= SITE_TEMPLATE_PATH; ?>/img/welco_logo 1.png" alt="логотип компании вэлкопэт">
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/logo.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
 					</div>
-					<span class="prime_img_text">Неполнорационный корм (лакомство-пребиотик). не является лекарственным средством.</span>
+					<span class="prime_img_text">
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/prime_img_text.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -59,45 +138,47 @@ $APPLICATION->SetTitle('Главная');
 					<div class="col col-lg-5 px-0 order-2 order-md-1">
 						<div class="about_left_side">
 							<div class="about_title">
-								<h2>Зачем животным <span class="orange">пребиотики?</span></h2>
+								<h2><? $APPLICATION->IncludeComponent(
+										"bitrix:main.include",
+										".default",
+										array(
+											"COMPONENT_TEMPLATE" => ".default",
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => "/include/why_title.php",
+											"EDIT_TEMPLATE" => ""
+										),
+										false
+									); ?></h2>
 							</div>
 							<div class="about_text">
-								<p>
-									Пребиотики - это составляющие продуктов
-									питания,
-									которые служат пищей пребиотическим бактериям.
-								</p>
-
-								<p>
-									Пребиотики стимулируют рост и жизнедеятельность полезной
-									микрофлоры в
-									кишечнике вашего питомца.
-									Попадая в кишечник, пребиотики не перевариваются и не
-									растворяются, а
-									питают
-									полезные бактерии и являются благоприятной средой для их
-									развития.
-								</p>
-
-								<p>
-									Welco - источник полезных пребиотических волокон, которые
-									способствуют
-									восстановлению полезной микрофлоры в кишечнике, улучшая
-									пищеварение и
-									помогая полноценно усваивать питательные вещества из пищи.
-								</p>
-								</span>
+								<? $APPLICATION->IncludeComponent(
+									"bitrix:main.include",
+									".default",
+									array(
+										"COMPONENT_TEMPLATE" => ".default",
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/include/why_text.php",
+										"EDIT_TEMPLATE" => ""
+									),
+									false
+								); ?>
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-lg-7 px-0 order-1 order-md-2 d-flex align-items-center justify-content-center">
 						<div class="about_img_wrap">
+							<? $APPLICATION->IncludeComponent(
+								"bitrix:main.include",
+								".default",
+								array(
+									"COMPONENT_TEMPLATE" => ".default",
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => "/include/why_img.php",
+									"EDIT_TEMPLATE" => ""
+								),
+								false
+							); ?>
 
-							<picture>
-								<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/planshet-dog.png" media="(max-width: 768px)">
-								<source srcset="<?= SITE_TEMPLATE_PATH; ?>/img/why-need-dog.png">
-								<img src="<?= SITE_TEMPLATE_PATH; ?>/img/why-need-dog.png" alt="фотография корги">
-							</picture>
 						</div>
 					</div>
 				</div>
@@ -132,7 +213,7 @@ $APPLICATION->SetTitle('Главная');
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "SORT",
 			1 => "",
 		),
 		"FILTER_NAME" => "",
@@ -194,7 +275,17 @@ $APPLICATION->SetTitle('Главная');
 	<div class="row m-0">
 		<div class="col-12 col-lg-6 px-0">
 			<div class="answers_img_wrap w-100">
-				<img src="<?= SITE_TEMPLATE_PATH; ?>/img/no.png" alt="заглушка отсутствующего изображения" class="answers_img">
+				<? $APPLICATION->IncludeComponent(
+					"bitrix:main.include",
+					".default",
+					array(
+						"COMPONENT_TEMPLATE" => ".default",
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/include/answers_img.php",
+						"EDIT_TEMPLATE" => ""
+					),
+					false
+				); ?>
 			</div>
 		</div>
 		<div class="col-12 col-lg-6 px-0">
@@ -272,147 +363,205 @@ $APPLICATION->SetTitle('Главная');
 	<div class="row m-0">
 		<div class="col-12 col-lg-6 px-0">
 			<div class="how_use_img_wrap w-100">
-				<img src="<?= SITE_TEMPLATE_PATH; ?>/img/how-use.png" alt="ряд из серых паучей с логотипом велкопэт" class="how_use_img w-100 h-100">
+				<? $APPLICATION->IncludeComponent(
+					"bitrix:main.include",
+					".default",
+					array(
+						"COMPONENT_TEMPLATE" => ".default",
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/include/how_use_img.php",
+						"EDIT_TEMPLATE" => ""
+					),
+					false
+				); ?>
 			</div>
 		</div>
 		<div class="col-12 col-lg-6 px-0">
 			<div class="how_use_content">
 				<div class="how_use_title">
-					<h2>как применять welco?</h2>
+					<h2><? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/how_use_title.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?></h2>
 				</div>
 				<p class="how_use_text">
-					Welco разработан для ежедневного использования <br> в течение 7 дней. 1 пауч (35
-					мл)
-					в день предназначен для животного любого веса, возраста и породы.
-					<br>
-					<br>
-					Давать Welco животному следует перед утренним
-					кормлением.
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/how_use_text.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 				</p>
 				<div class="how_use_instruction">
-					<img src="<?= SITE_TEMPLATE_PATH; ?>/img/how-use-instruction.png" alt="инструкция по использованию корма велкопэт">
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/how_use_instruction.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 <!-- секция где купить -->
-
-<? $APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"wherebay",
-	array(
-		"COMPONENT_TEMPLATE" => ".default",
-		"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
-		"IBLOCK_ID" => "3",	// Код информационного блока
-		"NEWS_COUNT" => "20",	// Количество новостей на странице
-		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
-		"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
-		"FILTER_NAME" => "",	// Фильтр
-		"FIELD_CODE" => array(	// Поля
-			0 => "",
-			1 => "",
-		),
-		"PROPERTY_CODE" => array(	// Свойства
-			0 => "",
-			1 => "",
-		),
-		"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
-		"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
-		"AJAX_MODE" => "N",	// Включить режим AJAX
-		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
-		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
-		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
-		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
-		"CACHE_TYPE" => "A",	// Тип кеширования
-		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
-		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
-		"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
-		"SET_TITLE" => "Y",	// Устанавливать заголовок страницы
-		"SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
-		"SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
-		"SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
-		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
-		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-		"PARENT_SECTION" => "",	// ID раздела
-		"PARENT_SECTION_CODE" => "",	// Код раздела
-		"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
-		"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
-		"DISPLAY_DATE" => "Y",	// Выводить дату элемента
-		"DISPLAY_NAME" => "Y",	// Выводить название элемента
-		"DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
-		"DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
-		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
-		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
-		"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
-		"PAGER_TITLE" => "Новости",	// Название категорий
-		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
-		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
-		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
-		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
-		"SET_STATUS_404" => "N",	// Устанавливать статус 404
-		"SHOW_404" => "N",	// Показ специальной страницы
-		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
-	),
-	false
-); ?>
-
+<section class="where_bay position-relative" id="where_bay">
+	<div class="row m-0">
+		<div class="col-10 offset-1 px-0">
+			<div class="row m-0">
+				<div class="col">
+					<div class="where_bay_title">
+						<h2><? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/where_bay_title.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?></h2>
+					</div>
+				</div>
+			</div>
+			<? $APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"wherebay",
+				array(
+					"COMPONENT_TEMPLATE" => ".default",
+					"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+					"IBLOCK_ID" => "3",	// Код информационного блока
+					"NEWS_COUNT" => "20",	// Количество новостей на странице
+					"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+					"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+					"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+					"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+					"FILTER_NAME" => "",	// Фильтр
+					"FIELD_CODE" => array(	// Поля
+						0 => "",
+						1 => "",
+					),
+					"PROPERTY_CODE" => array(	// Свойства
+						0 => "",
+						1 => "",
+					),
+					"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+					"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+					"AJAX_MODE" => "N",	// Включить режим AJAX
+					"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+					"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+					"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+					"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+					"CACHE_TYPE" => "A",	// Тип кеширования
+					"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+					"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+					"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+					"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+					"SET_TITLE" => "Y",	// Устанавливать заголовок страницы
+					"SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
+					"SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
+					"SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
+					"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+					"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+					"PARENT_SECTION" => "",	// ID раздела
+					"PARENT_SECTION_CODE" => "",	// Код раздела
+					"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
+					"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+					"DISPLAY_DATE" => "Y",	// Выводить дату элемента
+					"DISPLAY_NAME" => "Y",	// Выводить название элемента
+					"DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+					"DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
+					"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+					"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+					"DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
+					"PAGER_TITLE" => "Новости",	// Название категорий
+					"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+					"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+					"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+					"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+					"SET_STATUS_404" => "N",	// Устанавливать статус 404
+					"SHOW_404" => "N",	// Показ специальной страницы
+					"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+				),
+				false
+			); ?>
+		</div>
+	</div>
+</section>
 <!-- секция с формой и соцсетями -->
 <section class="feedback" id="feedback">
 	<div class="row m-0">
 		<div class="col-12 d-flex flex-column align-items-center">
 			<div class="feedback_title">
-				<h2>Консультация ветеринарного специалиста</h2>
+				<h2>
+				<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/form_title.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
+				</h2>
 			</div>
 			<div class="feedback_subtitle">
-				<p>Наши ветеринарные врачи проконсультируют вас и помогут с выбором продукции Welco
+				<p>
+				<? $APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							".default",
+							array(
+								"COMPONENT_TEMPLATE" => ".default",
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/include/form_subtitle.php",
+								"EDIT_TEMPLATE" => ""
+							),
+							false
+						); ?>
 				</p>
 			</div>
 			<div class="feedback_form">
-				<div class="input-group phone_group justify-content-between mb-3">
-					<div class="text-field">
-						<label class="text-field__label" for="userphone">Ваш телефон</label>
-						<input class="text-field__input d-block" type="tel" name="userphone" id="userphone" placeholder="+7 928 978 59 87">
-					</div>
-					<div class="text-field">
-						<label class="text-field__label" for="usermail">Ваша электронная почта</label>
-						<input class="text-field__input d-block" type="email" name="usermail" id="usermail" placeholder="agitagrand@gmail.com">
-					</div>
-
-				</div>
-				<div class="input-group feedback_text_area_group">
-					<div class="text-field w-100">
-						<label class="text-field__label" for="usertext">вопрос</label>
-						<textarea class="text-field__textarea d-block" name="usertext" id="usertext" placeholder="Задайте свой вопрос"></textarea>
-					</div>
-				</div>
-				<div class="feedback_dropdown_wrap">
-					<div class="row m-0">
-						<div class="col-12 col-md-8">
-							<div class="feedback_dropdown">
-								<input type="file" id="dropdown" name="dropdown" accept="image/png, image/jpeg, image/jpg">
-								<img src="<?= SITE_TEMPLATE_PATH; ?>/img/Shape.svg" alt="стилизованное синее облако с белой стрелкой внутри">
-								<span class="feedback_dropdown_text">Прикрепить файл в формате JPG. JPEG. PNG</span>
-							</div>
-							<div class="form-check mb-4 mb-lg-0 d-flex align-items-center">
-								<input class="form-check-input shadow-none mt-0" type="checkbox" value="" id="flexCheckDefault">
-								<label class="form-check-label" for="flexCheckDefault">Принимаю условия <a href="#">Политики конфиденциальности</a></label>
-							</div>
-						</div>
-						<div class="col-12 col-md-4">
-							<div class="d-flex justify-content-center justify-content-lg-end align-items-end h-100 w-100">
-								<div class="btn btn-primary">Спросить</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<?$APPLICATION->IncludeComponent(
+	"WELCO:main.feedback", 
+	"welcopet_form", 
+	array(
+		"REQUIRED_FIELDS" => array(
+			0 => "EMAIL",
+		),
+		"COMPONENT_TEMPLATE" => "welcopet_form",
+		"USE_CAPTCHA" => "N",
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+		"EMAIL_TO" => "livingston.dd92@gmail.com",
+		"EVENT_MESSAGE_ID" => array(
+		),
+		"AJAX" => "Y"
+	),
+	false
+);?>
 				<div class="social">
 					<div class="row m-0">
 						<div class="col-12">

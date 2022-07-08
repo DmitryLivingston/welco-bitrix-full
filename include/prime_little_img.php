@@ -1,0 +1,1 @@
+<img src="<?= SITE_TEMPLATE_PATH; ?>/img/packs.png" alt="три пауча вэлкопэт">
