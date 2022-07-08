@@ -34,18 +34,18 @@ $this->setFrameMode(true);
 									<div class="antistress_img_wrap">
 										<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="antistress_img product_img">
 									</div>
-									<div class="col-12 col-7 order-1 order-md-2 d-flex d-md-none flex-column justify-content-center align-items-center">
+									<div class="col-12 col-md-7 order-1 order-md-2 d-flex d-md-none flex-column justify-content-center align-items-center">
 										<p class="antistress_text">
 											<?= $arItem["PREVIEW_TEXT"] ?>
 										</p>
-										<!-- кнопки -->
+										<!-- кнопки адаптив-->
 										<div class="round_links d-flex justify-content-between">
 											<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
 											<a href="" data-modal-id="<?= implode(',', $arItem["PROPERTIES"]["MODAL"]["VALUE"]) ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
 										</div>
 									</div>
 								</div>
-								<div class="col col-7 order-1 order-md-2">
+								<div class="col col-md-7 order-1 order-md-2">
 									<div class="antistress_title">
 										<h1><?= $arItem["NAME"] ?></h1>
 										<h3><?= $arItem["PROPERTIES"]["SUBTITLE"]["VALUE"] ?></h3>
@@ -72,23 +72,28 @@ $this->setFrameMode(true);
 				<!-- //////////////////////////////////////////////////////////////////////////////////////////// НИЖНЯЯ ///////////////////////////////////////////////////////////////////// -->
 				<div class="kidney" style="background-color:<?= $arItem["PROPERTIES"]["COLOR"]["VALUE"] ?>" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 					<div class="row m-0 h-100">
-						<div class="col offset-xl-1 px-0">
-							<div class="row m-0 h-100">
+						<div class="col offset-xl-1 px-md-0">
+							<div class="row m-0 h-md-100">
 
-								<div class="col-lg-6 ps-0 h-100 kidney_content d-flex flex-column align-items-end">
+								<div class="col-12 col-lg-6 ps-md-0 h-md-100 kidney_content d-md-flex flex-column align-items-end">
 									<div class="kidney_title">
 										<h1><?= $arItem["NAME"] ?></h1>
 										<h3><?= $arItem["PROPERTIES"]["SUBTITLE"]["VALUE"] ?></h3>
 									</div>
+									<div class="kidney_img_wrap d-block d-md-none">
+										<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="kidney_img product_img mt-0">
+									</div>
 									<p class="kidney_text">
 										<?= $arItem["PREVIEW_TEXT"] ?>
 									</p>
-									<div class="round_links d-flex justify-content-between">
-										<a href="" data-modal-id="<?= implode(',', $arItem["PROPERTIES"]["MODAL"]["VALUE"]) ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
-										<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
+									<div class="w-100 d-flex justify-content-center justify-content-md-start">
+										<div class="round_links d-flex justify-content-between">
+											<a href="" data-modal-id="<?= implode(',', $arItem["PROPERTIES"]["MODAL"]["VALUE"]) ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
+											<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>
+										</div>
 									</div>
 								</div>
-								<div class="col-lg-6 px-0 h-100 d-flex align-items-center">
+								<div class="col-12 col-lg-6 px-0 h-100 d-none d-md-flex align-items-center justify-content-center justify-content-md-start">
 									<div class="kidney_img_wrap">
 										<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="kidney_img product_img">
 									</div>

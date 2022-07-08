@@ -65,7 +65,7 @@ $APPLICATION->SetTitle('Главная');
 							); ?>
 						</a>
 					</div>
-					<div class="pb-3">
+					<div class="order-1 order-md-2">
 						<? $APPLICATION->IncludeComponent(
 							"bitrix:main.include",
 							".default",
