@@ -13,31 +13,23 @@
 $this->setFrameMode(true);
 ?>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-	<div class="carousel-indicators">
-	<? $i= 0;
-		$b= 1;
-	 foreach ($arResult["ITEMS"] as $key=> $arItem) : ?>
-			<?
-			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-			?>
-		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?=$i++?>" <?=($key == 0) ? "class='active' aria-current='true'" : ''?> aria-label="Slide <?=$b++?>"></button>
 
-		<? endforeach; ?>		
-	</div>
-	<div class="carousel-inner news-list">
-
-		<? foreach ($arResult["ITEMS"] as $key=> $arItem) : ?>
+	<div class="carousel-inner news-list position-relative">
+		<? foreach ($arResult["ITEMS"] as $key => $arItem) : ?>
 			<?
 			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 			?>
 
-			<div class="carousel-item news-item <?=($key == 0) ? 'active' : ''?>" >
+			<div class="carousel-item news-item answer-news-item <?= ($key == 0) ? 'active' : '' ?>">
+
 				<div class="answers_container">
+				<h2 class="">Ответы <br> на вопросы</h2>
+
 					<div class="answers_item" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-						<h4><?= $arItem["NAME"] ?></h4>
-						<p><?= $arItem["PREVIEW_TEXT"] ?></p>
+						<p class="ps-md-4 answers_item_subtitle"><?= $arItem["NAME"] ?></p>
+						<p class="text-align-start"><i class="fa fa-quote-right" aria-hidden="true"></i></p>
+						<p class="answers-text mobile-text"><?= $arItem["PREVIEW_TEXT"] ?></p>
 					</div>
 				</div>
 			</div>

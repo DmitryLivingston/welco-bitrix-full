@@ -35,7 +35,7 @@ $APPLICATION->SetTitle('Главная');
 						); ?>
 					</h1>
 				</div>
-				<div class="prime_text"><span>
+				<div class="prime_text mobile-text"><span>
 						<? $APPLICATION->IncludeComponent(
 							"bitrix:main.include",
 							".default",
@@ -132,13 +132,13 @@ $APPLICATION->SetTitle('Главная');
 <!-- секция зачем животным пребиотики -->
 <section class="about position-relative" id="about" name="about">
 	<div class="row mx-0">
-		<div class="col offset-xl-1">
+		<div class="col offset-xl-1 px-0">
 			<div class="about_wrap">
 				<div class="row mx-0">
 					<div class="col col-lg-5 px-0 order-2 order-md-1">
 						<div class="about_left_side">
 							<div class="about_title">
-								<h2><? $APPLICATION->IncludeComponent(
+								<h1><? $APPLICATION->IncludeComponent(
 										"bitrix:main.include",
 										".default",
 										array(
@@ -148,9 +148,9 @@ $APPLICATION->SetTitle('Главная');
 											"EDIT_TEMPLATE" => ""
 										),
 										false
-									); ?></h2>
+									); ?></h1>
 							</div>
-							<div class="about_text">
+							<div class="about_text mobile-text">
 								<? $APPLICATION->IncludeComponent(
 									"bitrix:main.include",
 									".default",
@@ -288,7 +288,7 @@ $APPLICATION->SetTitle('Главная');
 				); ?>
 			</div>
 		</div>
-		<div class="col-12 col-lg-6 px-0">
+		<div class="col-12 col-lg-6 px-lg-0">
 			<? $APPLICATION->IncludeComponent(
 				"bitrix:news.list",
 				"answers",
@@ -361,7 +361,7 @@ $APPLICATION->SetTitle('Главная');
 <!-- секция как применять -->
 <section class="how_use position-relative" id="how_use">
 	<div class="row m-0">
-		<div class="col-12 col-lg-6 px-0">
+		<div class="col-12 col-lg-6 px-md-0">
 			<div class="how_use_img_wrap w-100">
 				<? $APPLICATION->IncludeComponent(
 					"bitrix:main.include",
@@ -376,7 +376,7 @@ $APPLICATION->SetTitle('Главная');
 				); ?>
 			</div>
 		</div>
-		<div class="col-12 col-lg-6 px-0">
+		<div class="col-12 col-lg-6 px-md-0">
 			<div class="how_use_content">
 				<div class="how_use_title">
 					<h2><? $APPLICATION->IncludeComponent(
@@ -391,7 +391,7 @@ $APPLICATION->SetTitle('Главная');
 							false
 						); ?></h2>
 				</div>
-				<p class="how_use_text">
+				<p class="how_use_text mobile-text">
 					<? $APPLICATION->IncludeComponent(
 						"bitrix:main.include",
 						".default",

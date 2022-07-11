@@ -109,7 +109,7 @@ h2 {
   font-family: "Proxima Nova", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 3.4vw;
+  font-size: 53.3333px;
   line-height: 100%;
   color: #090A29;
 }
@@ -946,43 +946,6 @@ footer a:hover {
   color: #4347FF;
 }
 
-.answers_img {
-  height: 708px;
-  object-fit: cover;
-}
-
-.answers_content {
-  margin-left: 6rem;
-  margin-top: 4rem;
-  margin-bottom: 88px;
-}
-
-.answers .carousel-item {
-  height: 708px;
-}
-
-.answers_container {
-  background-color: grey;
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.answers_item {
-  max-width: 500px;
-  max-height: 500px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .modalProduct {
   color: #065580;
 }
@@ -1210,9 +1173,11 @@ footer a:hover {
   .kidney_img_wrap img {
     max-width: unset;
   }
+
   .kidney_text {
     text-align: unset;
   }
+
   .prime_logo {
     top: 0;
     padding: 29px;
@@ -1261,9 +1226,12 @@ footer a:hover {
   }
 
   .about_wrap {
+    /* margin-bottom: 160px; */
+  }
+
+  .about_left_side {
     padding-right: 18px;
     padding-left: 18px;
-    margin-bottom: 160px;
   }
 
   .about_left_side {
@@ -1296,7 +1264,7 @@ footer a:hover {
 
   .antistress {
     padding-top: 55px;
-    height: 1662px;
+    min-height: 1662px;
     clip-path: polygon(0 0, 100% 0, 100% 84%, 0 99%);
     /* background: radial-gradient(159.39% 58.87% at 61.63% 24.44%, #870AB1 0%, #B780CA 100%); */
   }
@@ -1345,14 +1313,17 @@ footer a:hover {
   .kidney {
     clip-path: polygon(0 27%, 100% 0, 100% 100%, 0% 100%);
   }
+
   .kidney_title {
     margin-top: 400px;
     margin-left: 0;
     text-align: unset;
   }
+
   .kidney_text {
     font-size: 29px;
   }
+
   .kidney_content {
     padding-right: unset;
   }
@@ -1364,6 +1335,21 @@ footer a:hover {
 
   .sidebar_menu {
     min-height: unset;
+  }
+
+  .how_use_title {
+    font-size: 53.3333px;
+    max-width: 500px;
+  }
+
+  .how_use {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .how_use_content {
+    margin-top: 40px;
+    padding-right: 0;
   }
 }
 
@@ -1387,4 +1373,97 @@ footer a:hover {
   .skin_text {
     font-size: 16px;
   }
+
+  .prime .mobile_logo {
+    max-width: 85px;
+  }
+
+  .prime_img_text {
+    font-weight: 600;
+    font-size: 18px;
+    bottom: 35px
+  }
+
+  h1,
+  h2 {
+    font-size: 25px !important;
+    max-width: 312px;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  .prime_left_side {
+    padding-top: 35px;
+  }
+
+  .prime_text {
+    margin-bottom: 32px;
+  }
+
+  .prime_title {
+    padding-bottom: 32px;
+  }
+
+  .prime_btn_violet {
+    width: 185px;
+    height: 54px;
+    font-size: 18px;
+  }
+
+  .about_title {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  .about_left_side {
+    margin-top: 0;
+    margin-bottom: 72px;
+  }
+
+  .about_text p {
+    margin-bottom: 16px;
+  }
+
+  .antistress {
+    padding-top: 0;
+  }
+
+  .antistress_img_wrap {
+    margin-top: 0;
+  }
+
+  .mobile-text {
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .antistress .round_links {
+    margin-top: 60px;
+  }
+
+  .antistress {
+    min-height: 1200px;
+  }
+
+  .kidney {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .kidney_title {
+    margin-top: 155px;
+  }
+
+  .antistress_text,
+  .kidney_text {
+    margin-top: 60px;
+  }
+
+
+
 }

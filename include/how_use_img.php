@@ -1,1 +1,1 @@
-<img src="<?= SITE_TEMPLATE_PATH; ?>/img/how-use.png" alt="ряд из серых паучей с логотипом велкопэт" class="how_use_img w-100 h-100">
+<img src="<?= SITE_TEMPLATE_PATH; ?>/img/pauchi.png" alt="ряд из серых паучей с логотипом велкопэт" class="how_use_img w-100 h-100">

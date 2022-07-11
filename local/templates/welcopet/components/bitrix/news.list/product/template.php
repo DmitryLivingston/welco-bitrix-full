@@ -30,12 +30,12 @@ $this->setFrameMode(true);
 					<div class="row m-0">
 						<div class="col offset-xl-1 px-0">
 							<div class="row m-0">
-								<div class="col-12 col-md-5 px-0 order-2 order-md-1">
+								<div class="col-12 col-md-5 px-sm-0 order-2 order-md-1">
 									<div class="antistress_img_wrap">
 										<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="antistress_img product_img">
 									</div>
 									<div class="col-12 col-md-7 order-1 order-md-2 d-flex d-md-none flex-column justify-content-center align-items-center">
-										<p class="antistress_text">
+										<p class="antistress_text mobile-text">
 											<?= $arItem["PREVIEW_TEXT"] ?>
 										</p>
 										<!-- кнопки адаптив-->
@@ -83,10 +83,10 @@ $this->setFrameMode(true);
 									<div class="kidney_img_wrap d-block d-md-none">
 										<img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>" class="kidney_img product_img mt-0">
 									</div>
-									<p class="kidney_text">
+									<p class="kidney_text mobile-text">
 										<?= $arItem["PREVIEW_TEXT"] ?>
 									</p>
-									<div class="w-100 d-flex justify-content-center justify-content-md-start">
+									<div class="w-100 d-flex justify-content-center justify-content-md-end">
 										<div class="round_links d-flex justify-content-between">
 											<a href="" data-modal-id="<?= implode(',', $arItem["PROPERTIES"]["MODAL"]["VALUE"]) ?>" class="round_button pt-2 open-modal-button">состав <br><i class="fa-solid fa-plus"></i> </a>
 											<a href="#where_bay" class="round_button">где <br> купить <br><i class="fa-solid fa-chevron-down"></i></a>

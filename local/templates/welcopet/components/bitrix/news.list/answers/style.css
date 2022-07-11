@@ -1,4 +1,4 @@
-div.news-list
+/* div.news-list
 {
 	word-wrap: break-word;
 }
@@ -9,4 +9,127 @@ div.news-list img.preview_picture
 }
 .news-date-time {
 	color:#486DAA;
+} */
+.answers_container h2 {
+	margin-top: 43px;
+}
+
+.carousel-control-next-icon {
+	background-image: url(/local/templates/welcopet/img/arrow-right.svg);
+}
+
+.carousel-control-prev-icon {
+	background-image: url(/local/templates/welcopet/img/arrow-left.svg);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	position: absolute;
+	top: unset;
+	/* width: 5%; */
+}
+
+.carousel-control-prev {
+	left: unset;
+	right: 40%;
+}
+
+.carousel-control-next {
+	right: 35%;
+}
+
+.answers-text {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.answers_item_subtitle {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+	.carousel-control-next {
+		right: 0%;
+	}
+
+	.carousel-control-prev {
+		right: 10%;
+	}
+
+	.answers_img {
+		height: 708px;
+		object-fit: cover;
+	}
+
+	.answers_content {
+		margin-left: 6rem;
+		margin-top: 4rem;
+		margin-bottom: 88px;
+	}
+
+	.answers .carousel-item {
+		height: 708px;
+	}
+
+	.answers_container {
+		/* background-color: grey; */
+		height: 100%;
+		width: 100%;
+		color: #000;
+		text-align: start;
+		/* display: flex; */
+		/* justify-content: center; */
+		/* align-items: center; */
+		padding: 25px;
+	}
+
+	.answers_item {
+		max-width: 521px;
+		max-height: 500px;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		/* align-items: center; */
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.carousel-control-next {
+		right: 10%;
+	}
+
+	.carousel-control-prev {
+		right: 17%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.carousel-control-prev {
+		right: 20%;
+	}
+
+	.answers_item_subtitle {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+	}
+
+	.answers_item {
+		justify-content: start;
+		margin-top: 42px;
+	}
+
+	/* .carousel-control-prev,
+	.carousel-control-next {
+		bottom: 200px;
+	} */
+
+	.answers_img {
+		height: unset;
+	}
+	.answers .carousel-item {
+		height: 500px;
+	}
 }
