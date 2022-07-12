@@ -1,0 +1,114 @@
+ .button_fill, .button_fill_white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.button_fill {
+    width: 345px;
+    max-width: 100%;
+}
+
+.button_fill {
+    width: 345px;
+    height: 50px;
+    background: #fdc842;
+    border: 2px solid #fdc842;
+    box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2c3649;
+}
+/*
+.rules_form_new .map__feedback {
+    width: auto;
+    position: absolute; 
+    right: 0px;
+    top: 50px;
+    background: #4c5d68;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    z-index: 10;
+}*/
+
+.error{
+    color: #fdc842;
+}
+
+/*.form-group {
+    max-width: 100%;
+}
+
+.map__input-text {
+    background: #fff;
+    border-radius: 25px;
+    width: 350px;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    padding: 14px 20px;
+}
+
+.form-group input {
+    max-width: 100%;
+}
+
+
+/* rules page*/
+
+/*.fl_upld{
+    max-width:100%;
+}
+#fl_inp,#fl_inp1{
+    display:none;
+}
+.fl_upld label{
+    cursor: pointer;
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: #4c5d68;
+    font-weight: bold;
+    text-align: center;
+}
+.fl_upld label:hover{
+    background:#fc0;
+}
+#fl_nm,#fl_nm1{
+    margin-top: 10px;
+    color: #fdc842;
+    float: right;
+}
+
+.file_name_rules{
+    color: #fff;
+    margin-left: 30px;
+} */
+
+  .formStatus-loaded{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #4c5d68;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;  
+    top: 0;
+}
+
+
+.formStatus-loaded.fs-show{
+    display: flex;
+}

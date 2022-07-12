@@ -5,9 +5,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 </main>
 </div>
 <!-- сайдбар -->
-<div class="col-12 col-md-1 px-0">
+<div class="sidebar_wrap col-12 col-md-1 px-0">
 	<aside class="sidebar h-100">
-		<div class="d-flex flex-md-column flex-shrink-0">
+		<div class="sidebar_menu_wrap d-flex flex-md-column flex-shrink-0">
 			<div class="sidebar_menu d-flex flex-md-column justify-content-around justify-content-md-between align-items-center w-100">
 				<div class="sidebar_menu__menu"><a href="#" data-bs-toggle="modal" data-bs-target="#modalMenu"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/menu.svg" alt="три полоски с надписью меню"></a></div>
 				<div class="sidebar_menu__consultation"><a href="#feedback"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/consultation.svg" alt="значок диалога с надписью консультация врача"></a></div>

@@ -127,14 +127,14 @@ foreach ($arResult["ITEMS"] as $arItem) {
 							<div class="modal-close"></div>
 							<div class="modal-body-inner modalProduct">
 								<div class="row m-0">
-									<div class="col-5">
+									<div class="col-12 col-md-5">
 										<h5 class="modal-title" id="openModalLabel"><?= $item["NAME"] ?></h5>
 										<p class="modal-subtitle" id="openModalLabel"><?= $item["PROPERTY_SUBTITLE_VALUE"] ?></p>
 										<p class="modalAmount"><?= $item["PROPERTY_AMOUNT_VALUE"] ?></p>
 										<div class="modalAntistressImgWrap"><img src="<?= CFile::GetPath($item["PREVIEW_PICTURE"]); ?>" alt="изображение упаковки товара велеопэт" class="modal_antistress_img"></div>
 										<div class="col-7"></div>
 									</div>
-									<div class="col-7 d-flex flex-column justify-content-center">
+									<div class="col-12 col-md-7 d-flex flex-column justify-content-center">
 										<div class="modalAntistress_content">
 											<div class="modalAntistress_content_composition">
 												<div class="modalAntistress_title">
@@ -147,13 +147,13 @@ foreach ($arResult["ITEMS"] as $arItem) {
 										</div>
 										<div class="modalAntistress_content_table">
 											<div class="row">
-												<div class="col-5 modalAntistress_left">
+												<div class="col-12 col-md-5 modalAntistress_left">
 													<div class="modalAntistress_title">
 														<h6>Добавки</h6>
 													</div>
 													<div><?= $item["PROPERTY_ADD_VALUE"]["TEXT"] ?></div>
 												</div>
-												<div class="col-5 modalAntistress_right">
+												<div class="col-12 col-md-5 modalAntistress_right">
 													<div class="modalAntistress_title">
 														<h6>Питательная ценность</h6>
 													</div>

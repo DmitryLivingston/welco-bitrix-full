@@ -62,7 +62,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 					</div>
 					<div class="form-check mb-4 mb-lg-0 d-flex align-items-center">
 						<input class="form-check-input shadow-none mt-0" type="checkbox" value="" id="flexCheckDefault">
-						<label class="form-check-label" for="flexCheckDefault">Принимаю условия <a href="#">Политики конфиденциальности</a></label>
+						<label class="form-check-label" for="flexCheckDefault">Принимаю условия <a href="/privacy/">Политики конфиденциальности</a></label>
 					</div>
 				</div>
 				<div class="col-12 col-md-4">

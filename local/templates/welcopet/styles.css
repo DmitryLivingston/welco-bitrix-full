@@ -250,7 +250,10 @@ input[type=text] {
   left: 49%;
   bottom: 0;
 }
-
+.sidebar_menu_wrap {
+  position: sticky;
+  top: 30px;
+}
 @media screen and (max-width: 1024px) {
   .prime_text {
     font-size: 20px;
@@ -623,7 +626,7 @@ input[type=text] {
 }
 
 .where_bay_title {
-  margin-top: 169px;
+  margin-top: 132px;
   margin-bottom: 94px;
 }
 
@@ -1041,9 +1044,7 @@ footer a:hover {
   max-width: 800px;
 }
 
-.modalProduct .modalAntistress_left {
-  border-right: 1px solid rgba(6, 85, 128, 0.5);
-}
+
 
 .modalProduct .micro-table {
   margin-top: 41px;
@@ -1058,9 +1059,7 @@ footer a:hover {
   margin-bottom: 33px;
 }
 
-.modalProduct .modalAntistress_right {
-  padding-left: 63px;
-}
+
 
 @media screen and (max-width: 1440px) {
   .joints_img_wrap img {
@@ -1152,6 +1151,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .sidebar_wrap {
+    position: fixed;
+    bottom: 0;
+  }
   .prime_img_text {
     font-size: 38.4px;
     line-height: 95%;
@@ -1463,7 +1466,10 @@ footer a:hover {
   .kidney_text {
     margin-top: 60px;
   }
-
+  .feedback_subtitle {
+    text-align: start;
+    margin-top: 30px;
+  }
 
 
 }

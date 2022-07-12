@@ -19,12 +19,6 @@ $(document).ready(function () {
 		}, 1500);
 	});
 
-	// $('.modal-slick').slick();
-	// setting-name: setting-value);
-
-	// $(".modal").on("hide.bs.modal", function () {
-	// 	$(".modal-slick").slick('destroy').html("");
-	// });
 	$('.modal').on('shown.bs.modal', function (e) {
 		// $('.slick-slider').resize();
 		$('.modal-slick').slick({
@@ -36,10 +30,7 @@ $(document).ready(function () {
 	
 	});
 
-	// $('#modalGoods').on('hidde.bs.modal', function () {
-		// $('.slick-slider').resize();
-	//   });
-
-	// var modalsID =  jQuery('.modalProduct[имя_атрибутаs="значение_атрибута"]')
-
+	$( ".feedback_dropdown" ).click(function() {
+			$(".map__input-file").click();
+	  });
 });

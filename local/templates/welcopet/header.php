@@ -26,7 +26,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<!-- <script src="js/jquery-1.9.1.min.js"></script> -->
 	<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
 	<script src="<?= SITE_TEMPLATE_PATH ?>/js/script.js"></script>
+	<? global $APPLICATION;
+	////$APPLICATION->AddHeadScript("jquery-3.3.1.min.js");
+	$APPLICATION->AddHeadScript("/return/jquery.mask.js");
+	$APPLICATION->AddHeadScript("/return/jquery.validate.min.js");
+	$APPLICATION->AddHeadScript("/return/script.js");
 
+	$APPLICATION->SetAdditionalCSS("/return/style.css"); ?>
 
 	<!--[if lt IE 9]>
 		  <script src="js/html5.js"></script>

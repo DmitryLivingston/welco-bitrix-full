@@ -429,16 +429,16 @@ $APPLICATION->SetTitle('Главная');
 				<div class="col">
 					<div class="where_bay_title">
 						<h2><? $APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							".default",
-							array(
-								"COMPONENT_TEMPLATE" => ".default",
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => "/include/where_bay_title.php",
-								"EDIT_TEMPLATE" => ""
-							),
-							false
-						); ?></h2>
+								"bitrix:main.include",
+								".default",
+								array(
+									"COMPONENT_TEMPLATE" => ".default",
+									"AREA_FILE_SHOW" => "file",
+									"PATH" => "/include/where_bay_title.php",
+									"EDIT_TEMPLATE" => ""
+								),
+								false
+							); ?></h2>
 					</div>
 				</div>
 			</div>
@@ -516,70 +516,165 @@ $APPLICATION->SetTitle('Главная');
 		<div class="col-12 d-flex flex-column align-items-center">
 			<div class="feedback_title">
 				<h2>
-				<? $APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							".default",
-							array(
-								"COMPONENT_TEMPLATE" => ".default",
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => "/include/form_title.php",
-								"EDIT_TEMPLATE" => ""
-							),
-							false
-						); ?>
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/form_title.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 				</h2>
 			</div>
-			<div class="feedback_subtitle">
+			<div class="feedback_subtitle mobile-text">
 				<p>
-				<? $APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							".default",
-							array(
-								"COMPONENT_TEMPLATE" => ".default",
-								"AREA_FILE_SHOW" => "file",
-								"PATH" => "/include/form_subtitle.php",
-								"EDIT_TEMPLATE" => ""
-							),
-							false
-						); ?>
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						".default",
+						array(
+							"COMPONENT_TEMPLATE" => ".default",
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/include/form_subtitle.php",
+							"EDIT_TEMPLATE" => ""
+						),
+						false
+					); ?>
 				</p>
 			</div>
-			<div class="feedback_form">
-			<?$APPLICATION->IncludeComponent(
-	"WELCO:main.feedback", 
-	"welcopet_form", 
-	array(
-		"REQUIRED_FIELDS" => array(
-			0 => "EMAIL",
-		),
-		"COMPONENT_TEMPLATE" => "welcopet_form",
-		"USE_CAPTCHA" => "N",
-		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-		"EMAIL_TO" => "livingston.dd92@gmail.com",
-		"EVENT_MESSAGE_ID" => array(
-		),
-		"AJAX" => "Y"
-	),
-	false
-);?>
-				<div class="social">
-					<div class="row m-0">
-						<div class="col-12">
-							<div class="d-flex justify-content-center">
-								<div class="social_wrap d-flex justify-content-between">
-									<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/vk 2.svg" alt="значок в контакте"></a>
-									<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/yout 1.svg" alt="значок ютуба"></a>
-									<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/dzen 1.svg" alt="значок яндекс дзен"></a>
-									<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/insta 1.svg" alt="значок инстаграма"></a>
+
+			<div class="feedback_form" style="position:relative">
+				<?/* $APPLICATION->IncludeComponent(
+					"WELCO:main.feedback",
+					"welcopet_form",
+					array(
+						"REQUIRED_FIELDS" => array(
+							0 => "EMAIL",
+						),
+						"COMPONENT_TEMPLATE" => "welcopet_form",
+						"USE_CAPTCHA" => "N",
+						"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+						"EMAIL_TO" => "livingston.dd92@gmail.com",
+						"EVENT_MESSAGE_ID" => array(),
+						"AJAX" => "Y"
+					),
+					false
+				); */ ?>
+
+
+				<form id="form-rules-return" method="post" enctype="multipart/form-data" style="max-width: 100%;">
+					<div class="input-group phone_group justify-content-between mb-3">
+
+						<div class="text-field">
+							<label class="text-field__label" for="usermail">Ваша электронная почта</label>
+							<input class="text-field__input d-block" type="email" name="email" value="<?= $arResult["AUTHOR_EMAIL"] ?>" id="usermail">
+						</div>
+
+						<div class="text-field">
+							<label class="text-field__label" for="userphone">Ваш телефон</label>
+							<input class="text-field__input d-block" type="tel" name="phone" value="<?= $arResult["user_phone"] ?>" id="userphone">
+						</div>
+
+					</div>
+
+					<div class="input-group feedback_text_area_group">
+						<div class="text-field w-100">
+							<label class="text-field__label" for="usertext">Ваш вопрос</label>
+							<textarea class="text-field__textarea d-block" name="name" id="usertext"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group hidden-drop" style="visibility:hidden; opacity:0; position:absolute; top:0; left:0;">
+						<span class="file_name_rules">Копия 1</span>
+						<div class="fl_upld">
+							<label><input id="fl_inp1" class="map__input-file form-control" type="file" name="file1" placeholder="Копия чека">Выберите файл</label>
+							<div id="fl_nm1">Файл не выбран</div>
+						</div>
+					</div>
+
+					<div class="feedback_dropdown_wrap">
+						<div class="row m-0">
+							<div class="col-12 col-md-8">
+								<div class="feedback_dropdown">
+									<input type="file" id="dropdown" name="dropdown" accept="image/png, image/jpeg, image/jpg">
+									<img src="<?= SITE_TEMPLATE_PATH; ?>/img/Shape.svg" alt="стилизованное синее облако с белой стрелкой внутри">
+									<span class="feedback_dropdown_text">Прикрепить файл в формате JPG. JPEG. PNG</span>
+								</div>
+								<div class="form-check mb-4 mb-lg-0 d-flex align-items-center">
+								<input class="form-check-input shadow-none mt-0" type="checkbox" value="" name="check" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault">Принимаю условия <a href="/privacy/">Политики конфиденциальности</a></label>
+							</div>
+							</div>
+						
+							<div class="col-12 col-md-4">
+								<div class="d-flex justify-content-center justify-content-lg-end align-items-end h-100 w-100">
+									<div class="result error" hidden></div>
+									<button class="button_fill map__button modal__button" type="submit">Спросить</button>
 								</div>
 							</div>
 						</div>
 					</div>
+				<!-- loader -->
+				<div class="formStatus-loaded">
+					<img class="formStatus-loaded-icon" id="loadImg" src="/return/load.gif">
 				</div>
+				<!-- <img style="display: none;" id="loadImg" src="/return/load.gif" /> -->
+				</form>
+				
+
 
 			</div>
 		</div>
+		
+		<script>
+
+		</script>
+
+
 	</div>
+	<!-- </div> -->
+
+	<div class="modal fade modal__registration modal__call" id="myModalCall-done" tabindex="-1" role="dialog" aria-labelledby="myModalCallLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title map__heading" id="myModaCalllLabel">Уведомление</h4>
+				</div>
+				<div class="modal-body">
+					<span class="result done">
+						Ваша заявка успешно отправлена.
+
+					</span>
+				</div>
+				<div class="modal-footer">
+					<button class="button_fill map__button modal__button" data-dismiss="modal" aria-label="Close">Ок</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="social">
+		<div class="row m-0">
+			<div class="col-12">
+				<div class="d-flex justify-content-center">
+					<div class="social_wrap d-flex justify-content-between">
+						<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/vk 2.svg" alt="значок в контакте"></a>
+						<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/yout 1.svg" alt="значок ютуба"></a>
+						<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/dzen 1.svg" alt="значок яндекс дзен"></a>
+						<a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/img/social/insta 1.svg" alt="значок инстаграма"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- </div>
+
+	</div>
+	</div> -->
 </section>
 
 <?
